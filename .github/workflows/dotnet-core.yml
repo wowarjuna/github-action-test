@@ -22,7 +22,7 @@ jobs:
     - name: List directory
       run: ls
     - name: Install dependencies
-      run: dotnet restore
+      run: dotnet restore ./WebApplication1/WebApplication1.sln
     - name: Build
-      run: dotnet build --configuration Release --no-restore 
+      run: dotnet build ./WebApplication1/WebApplication1.sln --configuration Release --no-restore 
   
