@@ -20,7 +20,7 @@ jobs:
       with:
         dotnet-version: 3.1.301
     - name: List directory
-      run: ls -R 
+      run: ls
     - name: Install dependencies
       run: dotnet restore
     - name: Build
