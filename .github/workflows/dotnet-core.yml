@@ -11,7 +11,7 @@ jobs:
 
     runs-on: ubuntu-latest
     env:
-      working-directory: ./WebApplication1
+      working-directory: /home/runner/WebApplication1
 
     steps:
     - uses: actions/checkout@v2
@@ -22,5 +22,5 @@ jobs:
     - name: Install dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build WebApplication1/WebApplication1/WebApplication1.csproj --configuration Release --no-restore 
+      run: dotnet build --configuration Release --no-restore 
   
