@@ -20,6 +20,11 @@ jobs:
         dotnet-version: 3.1.301
     - name: List directory
       run: ls
+    - name: Setup kubectl
+      uses: azure/setup-kubectl@v1
+      with:
+        version: '<version>' # default is latest stable
+      id: install
     - name: Install dependencies
       run: dotnet restore ./WebApplication1/WebApplication1.sln
     - name: Build
