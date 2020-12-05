@@ -32,7 +32,7 @@ jobs:
         load: true
         
     - name: List image
-      run: ls /app/publish/
+      run: ls -R
         
     - name: Push image to Docker
       run: docker push webapplication1:latest 
