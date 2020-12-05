@@ -31,7 +31,7 @@ jobs:
         file: ./WebApplication1/WebApplication1/Dockerfile        
         load: true
         
-    - run: docker push wowarjuna/webapplication1:latest 
+    - run: docker push webapplication1:latest 
           
     - name: Setup kubectl
       uses: azure/setup-kubectl@v1      
