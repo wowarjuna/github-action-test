@@ -20,7 +20,7 @@ jobs:
         dotnet-version: 3.1.301
     - name: List directory
       run: ls
-    - name: Login to DockerHub
+    - name: Login to DockerHub updated
       uses: docker/login-action@v1 
       with:
         username: wowarjuna
