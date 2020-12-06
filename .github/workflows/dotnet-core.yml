@@ -26,13 +26,14 @@ jobs:
         username: wowarjuna
         password: 2ab3a44c-f7e0-419f-9cd8-7e2d326a82fb
     - name: Build and push Docker images
+      id: docker_build
       uses: docker/build-push-action@v2.2.1
       with:
         file: ./WebApplication1/WebApplication1/Dockerfile        
         load: true
         
-    - name: List image
-      run: ls -R
+    - name: Image digest
+      run: echo ${{ steps.docker_build.outputs.digest }}
         
     - name: Push image to Docker
       run: docker push webapplication1:dev 
