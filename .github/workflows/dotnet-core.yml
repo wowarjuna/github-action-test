@@ -33,10 +33,10 @@ jobs:
         context: ./  
         file: ./WebApplication1/WebApplication1/Dockerfile        
         load: true
-        tags: weapplication1:dev    
+        tags: wowarjuna/weapplication1:dev    
           
     - name: Push
-      run: docker push weapplication1:dev        
+      run: docker push wowarjuna/weapplication1:dev        
              
     - name: Setup kubectl
       uses: azure/setup-kubectl@v1      
