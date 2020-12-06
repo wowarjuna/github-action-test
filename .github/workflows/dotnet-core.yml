@@ -23,7 +23,6 @@ jobs:
     - name: Login to DockerHub updated
       uses: docker/login-action@v1 
       with:
-        registry: hub.docker.com 
         username: wowarjuna
         password: 2ab3a44c-f7e0-419f-9cd8-7e2d326a82fb
           
