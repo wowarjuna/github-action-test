@@ -21,12 +21,16 @@ jobs:
       
     - name: ls
       run: ls ../
-        
+    
+           
     - name: install kubectl
       uses: azure/setup-kubectl@v1
     
     - name: kubectl config
-      run: kubectl --kubeconfig /Webapplication1/okteto.config config view
+      run: export KUBECONFIG=$KUBECONFIG:./Webapplication1/okteto
+    
+    - name: show context
+      run: kubectl config get-contexts
              
  
 
