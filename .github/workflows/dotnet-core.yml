@@ -20,14 +20,14 @@ jobs:
         dotnet-version: 3.1.301
       
     - name: ls
-      run: ls ../
+      run: $PWD
     
            
     - name: install kubectl
       uses: azure/setup-kubectl@v1
     
     - name: kubectl config
-      run: export KUBECONFIG=$KUBECONFIG:./Webapplication1/okteto
+      run: export KUBECONFIG=$KUBECONFIG:$PWD/Webapplication1/okteto
     
     - name: show context
       run: kubectl config get-contexts
