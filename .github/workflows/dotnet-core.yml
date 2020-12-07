@@ -18,8 +18,7 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.301
-    - name: List directory
-      run: ls
+  
     - name: Login to DockerHub updated
       uses: docker/login-action@v1 
       with:
@@ -45,8 +44,6 @@ jobs:
         token: veYQS4jKLKuW9TTHsQgTUZXpc3WusXrciGhj43PY
         namespace: wowarjuna      
              
-    - name: Setup kubectl
-      uses: azure/setup-kubectl@v1      
-      id: install
+ 
 
   
