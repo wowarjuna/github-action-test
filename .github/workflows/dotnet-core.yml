@@ -23,7 +23,7 @@ jobs:
       uses: azure/setup-kubectl@v1
     
     - name: kubectl config
-      run: kubectl config get-contexts
+      run: kubectl --kubeconfig /.kube/okteto.config config view
              
  
 
