@@ -20,7 +20,7 @@ jobs:
         dotnet-version: 3.1.301
       
     - name: ls
-      run: ls
+      run: ls ../
         
     - name: install kubectl
       uses: azure/setup-kubectl@v1
