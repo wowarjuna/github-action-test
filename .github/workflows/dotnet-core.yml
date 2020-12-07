@@ -38,7 +38,7 @@ jobs:
       run: docker push wowarjuna/weapplication1:dev 
     
     - name: Okteto login
-      run: docker login -u wowarjuna -p veYQS4jKLKuW9TTHsQgTUZXpc3WusXrciGhj43PY
+      run: docker login -u wowarjuna --password-stdin veYQS4jKLKuW9TTHsQgTUZXpc3WusXrciGhj43PY
     
     - name: Okteto build
       run: docker build -t registry.cloud.okteto.net/wowarjuna/weapplication1:dev  . 
