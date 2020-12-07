@@ -23,7 +23,7 @@ jobs:
       uses: azure/setup-kubectl@v1
     
     - name: kubectl config
-      run: kubectl view config
+      run: kubectl config view
              
  
 
