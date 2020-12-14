@@ -30,7 +30,7 @@ jobs:
     
     - name: Build Docker Image
       run: |
-        cd ./WebApplication1 
+        cd ./WebApplication1/WebApplication1 
         docker build -t webapplication .
              
  
