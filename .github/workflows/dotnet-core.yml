@@ -32,6 +32,8 @@ jobs:
       run: |
         cd ./WebApplication1/WebApplication1 
         docker build -t webapplication .
+        docker tag webapplication wowarjuna/webapplication
+        docker push wowarjuna/webapplication
              
  
 
