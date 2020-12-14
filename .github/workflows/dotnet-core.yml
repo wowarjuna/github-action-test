@@ -18,19 +18,15 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.301
-      
-    - name: ls
-      run: echo $PWD
-    
            
     - name: install kubectl
       uses: azure/setup-kubectl@v1
     
-    - name: kubectl config
-      run: export KUBECONFIG=$KUBECONFIG:$PWD/Webapplication1/okteto
-    
-    - name: show context
-      run: kubectl config get-contexts
+    - name: Login to DockerHub
+      uses: docker/login-action@v1 
+      with:
+        username: ${{ secrets.DOCKER_HUB_USERNAME }}
+        password: ${{ secrets.DOCKER_HUB_TOKEN }}
              
  
 
