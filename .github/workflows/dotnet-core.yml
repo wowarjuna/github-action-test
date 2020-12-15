@@ -39,5 +39,5 @@ jobs:
     - name: Okteto config
       run: |
         mkdir -p ~/.kube/
-        ${{ secrets.DOCKER_HUB_TOKEN }} > ~/.kube/config
+        cp ./.kube/config/okteto.config ~/.kube/config
         kubectl get nodes
