@@ -17,10 +17,8 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 3.1.301
-           
-    - name: install kubectl
-      uses: azure/setup-kubectl@v1
+        dotnet-version: 3.1.301         
+
     
     - name: Login to DockerHub
       uses: docker/login-action@v1 
@@ -34,3 +32,12 @@ jobs:
         docker build -t webapplication .
         docker tag webapplication wowarjuna/webapplication
         docker push wowarjuna/webapplication
+    
+    - name: install kubectl
+      uses: azure/setup-kubectl@v1
+    
+    - name: Okteto config
+      run: |
+        mkdir -p ~/.kube/
+        ${{ secrets.DOCKER_HUB_TOKEN }} > ~/.kube/config
+        kubectl get nodes
