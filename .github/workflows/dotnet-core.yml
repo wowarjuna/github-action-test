@@ -33,3 +33,6 @@ jobs:
         mkdir -p ~/.kube/
         cp ./.kube/config/okteto.config ~/.kube/config
         kubectl get pod
+        
+    - name: Set registry on Okteto
+      run: kubectl create secret generic dockerhubcred --from-file=.dockerconfigjson=~/.docker/config.json --type=kubernetes.io/dockerconfigjson
