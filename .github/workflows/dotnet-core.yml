@@ -40,4 +40,5 @@ jobs:
        cd ./WebApplication1
        ls 
        kubectl apply -f webapplication_deployment.yaml
+       kubectl get pod
 
