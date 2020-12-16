@@ -39,6 +39,7 @@ jobs:
       run: |
        cd ./WebApplication1
        ls 
+       kubectl config view
        kubectl describe pod webapplication       
        kubectl apply -f webapplication_deployment.yaml
        kubectl get pod
