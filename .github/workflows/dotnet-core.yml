@@ -39,6 +39,7 @@ jobs:
       run: |
        cd ./WebApplication1
        ls 
+       kubectl get ns
        kubectl delete deployment webapplication
        kubectl apply -f webapplication_deployment.yaml
        kubectl get pod
