@@ -39,6 +39,7 @@ jobs:
       run: |
        cd ./WebApplication1
        ls 
+       kubectl delete deployment webapplication -n wowarjuna
        kubectl apply -f webapplication_deployment.yaml
        kubectl get pod
 
