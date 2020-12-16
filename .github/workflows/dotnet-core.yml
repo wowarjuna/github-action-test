@@ -37,7 +37,7 @@ jobs:
         
     - name: Deploy Webapplication
       run: |
-       cd ./WebApplication1/WebApplication1
+       cd ./WebApplication1
        ls 
        kubectl apply -f webapplication_deployment.yaml
 
