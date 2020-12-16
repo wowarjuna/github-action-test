@@ -36,5 +36,8 @@ jobs:
         kubectl get pod
         
     - name: Deploy Webapplication
-      run: kubectl apply -f ./WebApplication1/WebApplication1/webapplication_deployment.yaml
+      run: |
+       cd ./WebApplication1/WebApplication1
+       ls 
+       kubectl apply -f webapplication_deployment.yaml
 
